@@ -29,7 +29,7 @@ def translate_pdf():
 
             if text is not None and text.strip() != "":
                 try:
-                    translated_text = translator.translate(text, src='en', dest='cs').text
+                    translated_text = translator.translate(text, src='en', dest='cs').text #here you can setup source and destination language
 
                     formatted_text = f"--- Page {p + 1} ---\n\n{translated_text}\n\n\n"
                     text_box.insert(tk.END, formatted_text)
